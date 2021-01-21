@@ -1,0 +1,29 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@react-navigation/native": "5.9.0",
+    "@react-navigation/stack": "5.13.0",
+    "axios": "0.21.1",
+    "expo-asset": "8.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native-bootstrap-styles": "0.4.5-0-n",
+    "react-native-safe-area-context": "3.1.9",
+    "react-native-web": "0.14.10",
+    "react-navigation": "4.0.9",
+    "react-navigation-stack": "2.10.2",
+    "react-scripts": "3.4.1",
+    "request": "2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
