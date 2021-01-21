@@ -19,7 +19,6 @@ function RootStack() {
       <Stack.Navigator
         initialRouteName="Search"
         screenOptions={{ headerBackImage: MyCustomHeaderBackImage }}
-        defaultNavigationOptions={{ title: "search" }}
       >
         <Stack.Screen
           name="Search"

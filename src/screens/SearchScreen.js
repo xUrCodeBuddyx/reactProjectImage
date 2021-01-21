@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import {  View } from "react-native";
 import unsplash from "../api/unsplash";
 import SearchBar from "../components/SearchBar";
 import ImageList from "../components/ImageList";
 const SearchScreen = () => {
-  const [term, setTerm] = useState();
+  const [term] = useState();
   const [images, setImages] = useState([]);
 
   let onSearchSubmit = async (value) => {
@@ -23,6 +23,5 @@ const SearchScreen = () => {
     </View>
   );
 };
-const styles = StyleSheet.create({});
 
 export default SearchScreen;

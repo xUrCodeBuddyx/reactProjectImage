@@ -4,7 +4,6 @@ import { Dimensions } from "react-native";
 
 const ImageScreen = ({ route, navigation }) => {
   const { image } = route.params;
-  console.log(image)
   navigation.setOptions({ title: image.alt_description });
   return (
     <View>

@@ -11,7 +11,11 @@ const ImageCard = (props) => {
       return {
         display: "block",
         background: "grey",
-        height: "500px"
+        height: "500px",
+        color: "white",
+        textAlign: "center",
+        verticalAlign: "middle",
+        fontSize: 20
       };
     } else return { display: "none" };
   };
