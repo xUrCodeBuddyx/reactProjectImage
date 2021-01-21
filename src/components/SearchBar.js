@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { View, StyleSheet, TextInput } from "react-native";
 
 const SearchBar = (props) => {
   const [term, setTerm] = useState();
@@ -29,9 +29,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 20,
     textAlign: "center"
-  },
-  button: {
-    marginBottom: 20
   }
 });
 

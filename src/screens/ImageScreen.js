@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Image } from "react-native";
+import {  View, Image } from "react-native";
 import { Dimensions } from "react-native";
 
 const ImageScreen = ({ route, navigation }) => {
@@ -18,6 +18,5 @@ const ImageScreen = ({ route, navigation }) => {
     </View>
   );
 };
-const styles = StyleSheet.create({});
 
 export default ImageScreen;

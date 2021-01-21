@@ -2,7 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import SearchScreen from "./screens/SearchScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import ImageScreen from "./screens/ImageScreen";
-import { StyleSheet, View, Image } from "react-native";
+import { Image } from "react-native";
 import React from "react";
 const Stack = createStackNavigator();
 
@@ -31,7 +31,6 @@ function RootStack() {
           component={ImageScreen}
           options={{
             title: "photo detail",
-
             headerStyle: {
               backgroundColor: "#f4511e"
             },
