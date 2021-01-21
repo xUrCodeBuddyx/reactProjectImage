@@ -16,7 +16,7 @@ const SearchBar = (props) => {
         value={term}
         name="input"
         onChange={onSearchSubmit}
-        placeholder="query"
+        placeholder="Type a query"
       />
     </View>
   );
