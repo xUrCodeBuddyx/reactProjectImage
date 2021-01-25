@@ -4,8 +4,8 @@ import { useNavigation } from "@react-navigation/native";
 
 const ImageCard = (props) => {
   const [loaded, setLoaded] = useState(false);
-  const { urls } = props.image;
   const navigation = useNavigation();
+
   const loadingStyle = () => {
     if (loaded === false) {
       return {
@@ -41,7 +41,7 @@ const ImageCard = (props) => {
         <Text style={loadingStyle()}>loading</Text>
         <Image
           style={NotLoadingStyle()}
-          source={{ uri: urls.regular }}
+          source={{ uri: props.image.largeImageURL }}
           onLoad={() => setLoaded(true)}
         />
       </TouchableOpacity>
