@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { View, Button } from "react-native";
-import unsplash from "../api/unsplash";
 import SearchBar from "../components/SearchBar";
 import ImageList from "../components/ImageList";
 import axios from "axios";
@@ -9,7 +8,6 @@ const SearchScreen = () => {
   const [term, setTerm] = useState();
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
-  let p = 1;
   let onSearchSubmit = async (value) => {
     setTerm(value);
     const response = await axios.get("https://pixabay.com/api/", {
@@ -25,7 +23,7 @@ const SearchScreen = () => {
 
   return (
     <View>
-      <SearchBar onChange={onSearchSubmit} />
+      <SearchBar onSubmitEditing={onSearchSubmit} />
       <View>
         <Button
           title={`Page: ${page}`}
@@ -34,7 +32,7 @@ const SearchScreen = () => {
             onSearchSubmit(term);
           }}
         />
-        <ImageList images={images} page={p} />
+        <ImageList images={images} page={page} />
       </View>
     </View>
   );

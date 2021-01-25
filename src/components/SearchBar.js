@@ -5,7 +5,7 @@ const SearchBar = (props) => {
   const [term, setTerm] = useState();
 
   let onSearchSubmit = (event) => {
-    props.onChange(event.target.value);
+    props.onSubmitEditing(event.target.value);
     setTerm(props.value);
   };
   return (
@@ -15,7 +15,7 @@ const SearchBar = (props) => {
         type="text"
         value={term}
         name="input"
-        onChange={onSearchSubmit}
+        onSubmitEditing={onSearchSubmit}
         placeholder="Type a query"
       />
     </View>
