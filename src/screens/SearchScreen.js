@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Button } from "react-native";
 import SearchBar from "../components/SearchBar";
 import ImageList from "../components/ImageList";
@@ -21,15 +21,22 @@ const SearchScreen = () => {
     setImages(response.data.hits);
   };
 
+  let resetPage = (val) => {
+    onSearchSubmit(val);
+    setPage(1);
+  };
+  useEffect(() => {
+    onSearchSubmit(term);
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
   return (
     <View>
-      <SearchBar onSubmitEditing={onSearchSubmit} />
+      <SearchBar onSubmitEditing={resetPage} />
       <View>
         <Button
           title={`Page: ${page}`}
           onPress={() => {
             setPage(page + 1);
-            onSearchSubmit(term);
           }}
         />
         <ImageList images={images} page={page} />
